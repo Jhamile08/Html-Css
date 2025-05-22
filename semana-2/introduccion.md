@@ -115,3 +115,96 @@ La etiqueta <link> se coloca en el head y le dice al navegador que traiga los es
 - Permite reutilizar estilos en varias páginas
 
 - Es más fácil de mantener
+
+# Formas de llamar a las etiquetas en CSS
+
+Podés aplicar estilos a los elementos de tres formas:
+### 1. Por nombre de etiqueta
+
+Afecta a todas las etiquetas del mismo tipo.
+
+```css
+p {
+  color: red;
+}
+```
+## 2. Por clase (class)
+
+Usá . seguido del nombre de la clase.
+Afecta a los elementos que tengan ese atributo class.
+```html
+<p class="mensaje">Hola</p>
+
+```
+```css
+.mensaje {
+  font-size: 20px;
+}
+
+```
+## 3. Por id (id)
+
+Usá # seguido del nombre del id.
+Debe ser único por página.
+```html
+<p id="importante">¡Atención!</p>
+```
+```css
+#importante {
+  color: blue;
+}
+```
+### 4. Con selectores combinados
+
+Podés combinar selectores para ser más específico.
+```html
+div p {
+  color: green;
+} /* Todos los <p> dentro de un <div> */
+```
+```css
+.container .titulo {
+  text-align: center;
+}
+```
+
+# Entendiendo los espacios en CSS: el modelo de caja (Box Model)
+
+En CSS, cada elemento HTML se comporta como una "caja", y esa caja tiene 4 partes fundamentales:
+## 🔹 1. content (contenido)
+
+Es el contenido real de la etiqueta (como un texto, imagen, etc.).
+Ejemplo: si tenés un <p>Hola</p>, el texto "Hola" es el contenido.
+## 🔹 2. padding (relleno)
+
+Es el espacio entre el contenido y el borde de la caja.
+Sirve para que el contenido no esté pegado al borde.
+```css
+p {
+  padding: 10px; /* Espacio interior */
+}
+```
+
+## 🔹 3. border (borde)
+
+Es el borde de la caja. Puede tener grosor, color y estilo.
+```css
+p {
+  border: 2px solid black; /* Borde negro, sólido, de 2px */
+}
+```
+
+## 🔹 4. margin (margen)
+
+Es el espacio por fuera del borde, que separa una caja de otra.
+```css
+p {
+  margin: 20px; /* Espacio exterior */
+}
+```
+## 🔹 En conclusión:
+El margin aleja los elementos y el padding lo rellena
+
+ Importante:
+La combinación de estas 4 partes se conoce como el Modelo de Caja (Box Model). Podés ver una visualización aquí:
+🔗 https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model
