@@ -36,7 +36,7 @@ Ejemplo básico:
   <div>Elemento 4</div>
 </div>
 ```
-![Ejemplo de grid](./img/grid.jpg)
+![Ejemplo de grid](.,/img/grid.jpg)
 
 
 
