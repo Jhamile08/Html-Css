@@ -38,5 +38,44 @@ Ejemplo básico:
 ```
 ![Ejemplo de grid](../img/grid.jpg)
 
+ Explicación:
+display: grid;
+Esto convierte el contenedor .container en una grid, activando todas las propiedades relacionadas.
 
+grid-template-columns: 1fr 1fr;
+Define dos columnas de igual tamaño.
 
+1fr significa "una fracción del espacio disponible".
+
+Entonces, 1fr 1fr reparte el ancho total del contenedor en dos partes iguales.
+
+grid-template-rows: auto;
+Esto crea una sola fila que se adapta automáticamente al contenido de los elementos.
+
+gap: 10px;
+Define un espacio de 10 píxeles entre todas las filas y columnas de la grid (separación interna).
+
+## Otras formas de hacerlo:
+ A. Usar repeat() para simplificar columnas:
+```css
+grid-template-columns: repeat(2, 1fr);
+```
+Significa: "Repite dos veces 1fr".
+Con puedes personalizar el número de columnas, filas, tamaños y espacios según tus necesidades. Es como jugar con bloques de construcción para diseñar la web
+
+B. Definir tamaños fijos:
+```css
+grid-template-columns: 200px 1fr;
+```
+ Primera columna de 200px, segunda columna toma el resto del espacio disponible.
+
+ C. Crear múltiples filas:
+```css
+grid-template-rows: 100px auto;
+```
+ La primera fila tendrá 100px de alto, y la segunda se ajusta al contenido.
+
+ dale un vistazo al ejemplo de grid antes de continuar con el ejercicio:
+
+![Ejercicio de grid](../img/ejercicio.jpg)
+replica esta imagen usando grid
